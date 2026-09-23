@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudLedger | AWS 3-Tier Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <h1>☁ CloudLedger</h1>
+            <span>AWS 3-Tier Web Application</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div>
+                <p class="tag">AWS CLOUD PROJECT</p>
+                <h2>Simple. Secure. Scalable.</h2>
+                <p>
+                    A custom three-tier web application built using
+                    AWS networking, load balancing, EC2, Nginx,
+                    Node.js and MySQL.
+                </p>
+
+                <button onclick="loadTransactions()">
+                    Load Transactions
+                </button>
+            </div>
+        </section>
+
+        <section class="status-card">
+            <h3>Application Status</h3>
+            <p id="status">Checking application...</p>
+        </section>
+
+        <section class="transactions">
+            <h3>Recent Transactions</h3>
+
+            <div id="transaction-list">
+                <p>Click "Load Transactions" to fetch data.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Built by Vedant Shende | AWS 3-Tier Project</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

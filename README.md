@@ -1,39 +1,35 @@
 # AWS 3-Tier Web Application
 
-A three-tier web application designed and deployed on Amazon Web Services (AWS).
+A beginner-friendly AWS 3-tier web application built using:
+
+- AWS VPC
+- Application Load Balancer
+- EC2
+- Auto Scaling
+- Nginx
+- Node.js
+- MySQL
+- Amazon RDS
+- IAM
+- S3
+- CloudWatch
 
 ## Architecture
 
-The application follows a three-tier architecture:
+The application is divided into three layers:
 
-1. Web Tier - Nginx and Frontend
-2. Application Tier - Node.js and Express API
-3. Database Tier - Amazon RDS MySQL
+1. Web Tier
+2. Application Tier
+3. Database Tier
 
-## AWS Services
+## Project Goal
 
-- Amazon VPC
-- Amazon EC2
-- Application Load Balancer
-- Auto Scaling
-- Amazon RDS MySQL
-- Amazon S3
-- Internet Gateway
-- NAT Gateway
-- Security Groups
-
-## Technologies
-
-- HTML
-- CSS
-- JavaScript
-- Nginx
-- Node.js
-- Express
-- MySQL
-- Git
-- GitHub
+The goal of this project is to build a secure and highly available web application using AWS networking, load balancing, auto scaling and database services.
 
 ## Project Status
 
-Project is currently under development.
+Currently under development.
+
+## Author
+
+Vedant Shende
