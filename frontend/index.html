@@ -3,385 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudLedger | Finance Dashboard</title>
+    <title>CloudLedger | Financial Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<div class="app">
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="brand">
-            <div class="brand-icon">C</div>
-            <div>
-                <h2>CloudLedger</h2>
-                <span>Finance Platform</span>
-            </div>
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-mark">C</div>
+        <div>
+            <h1>CloudLedger</h1>
+            <span>Financial Management Platform</span>
         </div>
+    </div>
 
+    <div class="status">
+        <span class="status-dot"></span>
+        System Operational
+    </div>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
         <nav>
-            <a href="#" class="nav-item active">
-                <span>⌂</span>
+            <button class="nav-item active" data-section="dashboard">
                 Dashboard
-            </a>
+            </button>
 
-            <a href="#" class="nav-item">
-                <span>↔</span>
+            <button class="nav-item" data-section="transactions">
                 Transactions
-            </a>
+            </button>
 
-            <a href="#" class="nav-item">
-                <span>◔</span>
-                Analytics
-            </a>
-
-            <a href="#" class="nav-item">
-                <span>▣</span>
+            <button class="nav-item" data-section="budgets">
                 Budgets
-            </a>
+            </button>
+
+            <button class="nav-item" data-section="analytics">
+                Analytics
+            </button>
         </nav>
 
         <div class="sidebar-bottom">
-            <a href="#" class="nav-item">
-                <span>⚙</span>
-                Settings
-            </a>
-
-            <div class="user-card">
-                <div class="avatar">VS</div>
-                <div>
-                    <strong>Vedant</strong>
-                    <small>Administrator</small>
-                </div>
+            <div class="aws-badge">
+                <strong>AWS 3-Tier</strong>
+                <span>CloudLedger v2</span>
             </div>
         </div>
     </aside>
 
 
-    <!-- Main Content -->
     <main class="main-content">
 
-        <!-- Top bar -->
-        <header class="topbar">
-            <div>
-                <p class="welcome">Welcome back, Vedant 👋</p>
-                <h1>Financial Overview</h1>
-            </div>
+        <!-- DASHBOARD -->
 
-            <div class="top-actions">
-                <button class="notification">🔔</button>
-                <div class="status">
-                    <span class="status-dot"></span>
-                    AWS System Online
-                </div>
-            </div>
-        </header>
+        <section id="dashboard" class="page active">
 
-
-        <!-- Statistics -->
-        <section class="stats-grid">
-
-            <div class="stat-card">
-                <div class="stat-top">
-                    <span>Total Balance</span>
-                    <div class="stat-icon">₹</div>
-                </div>
-                <h2 id="totalBalance">₹48,520</h2>
-                <p class="positive">↑ 8.4% <span>from last month</span></p>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-top">
-                    <span>Total Income</span>
-                    <div class="stat-icon">↗</div>
-                </div>
-                <h2 id="totalIncome">₹65,000</h2>
-                <p class="positive">↑ 12.2% <span>from last month</span></p>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-top">
-                    <span>Total Expenses</span>
-                    <div class="stat-icon">↘</div>
-                </div>
-                <h2 id="totalExpenses">₹16,480</h2>
-                <p class="negative">↑ 4.6% <span>from last month</span></p>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-top">
-                    <span>Transactions</span>
-                    <div class="stat-icon">#</div>
-                </div>
-                <h2 id="transactionCount">42</h2>
-                <p class="neutral">This month</p>
-            </div>
-
-        </section>
-
-
-        <!-- Charts -->
-        <section class="dashboard-grid">
-
-            <div class="panel spending-panel">
-                <div class="panel-header">
-                    <div>
-                        <h3>Monthly Spending</h3>
-                        <p>Expense activity over the last 6 months</p>
-                    </div>
-
-                    <select id="periodSelect">
-                        <option>Last 6 months</option>
-                        <option>This year</option>
-                    </select>
-                </div>
-
-                <div class="chart">
-                    <div class="chart-values">
-                        <span>₹20k</span>
-                        <span>₹15k</span>
-                        <span>₹10k</span>
-                        <span>₹5k</span>
-                        <span>₹0</span>
-                    </div>
-
-                    <div class="bars">
-                        <div class="bar-group">
-                            <div class="bar" style="height:45%"></div>
-                            <span>Apr</span>
-                        </div>
-
-                        <div class="bar-group">
-                            <div class="bar" style="height:62%"></div>
-                            <span>May</span>
-                        </div>
-
-                        <div class="bar-group">
-                            <div class="bar" style="height:38%"></div>
-                            <span>Jun</span>
-                        </div>
-
-                        <div class="bar-group">
-                            <div class="bar" style="height:72%"></div>
-                            <span>Jul</span>
-                        </div>
-
-                        <div class="bar-group">
-                            <div class="bar" style="height:55%"></div>
-                            <span>Aug</span>
-                        </div>
-
-                        <div class="bar-group">
-                            <div class="bar active-bar" style="height:82%"></div>
-                            <span>Sep</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="panel category-panel">
-                <div class="panel-header">
-                    <div>
-                        <h3>Expense Categories</h3>
-                        <p>Where your money goes</p>
-                    </div>
-                </div>
-
-                <div class="category-list">
-
-                    <div class="category">
-                        <div class="category-info">
-                            <span class="category-dot food"></span>
-                            <span>Food</span>
-                        </div>
-                        <strong>32%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:32%"></div>
-                    </div>
-
-                    <div class="category">
-                        <div class="category-info">
-                            <span class="category-dot travel"></span>
-                            <span>Travel</span>
-                        </div>
-                        <strong>24%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:24%"></div>
-                    </div>
-
-                    <div class="category">
-                        <div class="category-info">
-                            <span class="category-dot bills"></span>
-                            <span>Bills</span>
-                        </div>
-                        <strong>18%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:18%"></div>
-                    </div>
-
-                    <div class="category">
-                        <div class="category-info">
-                            <span class="category-dot shopping"></span>
-                            <span>Shopping</span>
-                        </div>
-                        <strong>15%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:15%"></div>
-                    </div>
-
-                    <div class="category">
-                        <div class="category-info">
-                            <span class="category-dot other"></span>
-                            <span>Other</span>
-                        </div>
-                        <strong>11%</strong>
-                    </div>
-
-                    <div class="progress">
-                        <div style="width:11%"></div>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-
-
-        <!-- Recent Transactions -->
-        <section class="panel transactions-panel">
-
-            <div class="panel-header">
+            <div class="page-heading">
                 <div>
-                    <h3>Recent Transactions</h3>
-                    <p>Your latest financial activity</p>
-                </div>
+                    <p class="eyebrow">OVERVIEW</p>
 
-                <button class="view-all">View all →</button>
-            </div>
-
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Transaction</th>
-                            <th>Category</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th class="amount-heading">Amount</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="transactionTable">
-
-                        <tr>
-                            <td>
-                                <div class="transaction-name">
-                                    <div class="transaction-icon">🛒</div>
-                                    <div>
-                                        <strong>Grocery Shopping</strong>
-                                        <small>Weekly groceries</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Food</td>
-                            <td>25 Sep 2026</td>
-                            <td><span class="badge completed">Completed</span></td>
-                            <td class="amount expense">− ₹750</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="transaction-name">
-                                    <div class="transaction-icon">💡</div>
-                                    <div>
-                                        <strong>Electricity Bill</strong>
-                                        <small>Monthly electricity</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Bills</td>
-                            <td>24 Sep 2026</td>
-                            <td><span class="badge completed">Completed</span></td>
-                            <td class="amount expense">− ₹1,200</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="transaction-name">
-                                    <div class="transaction-icon">🚌</div>
-                                    <div>
-                                        <strong>Bus and Travel</strong>
-                                        <small>Travel expenses</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Travel</td>
-                            <td>23 Sep 2026</td>
-                            <td><span class="badge completed">Completed</span></td>
-                            <td class="amount expense">− ₹350</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="transaction-name">
-                                    <div class="transaction-icon">🎓</div>
-                                    <div>
-                                        <strong>Education</strong>
-                                        <small>Course materials</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Education</td>
-                            <td>22 Sep 2026</td>
-                            <td><span class="badge completed">Completed</span></td>
-                            <td class="amount expense">− ₹999</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div class="transaction-name">
-                                    <div class="transaction-icon income-icon">₹</div>
-                                    <div>
-                                        <strong>Monthly Salary</strong>
-                                        <small>September salary</small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>Income</td>
-                            <td>20 Sep 2026</td>
-                            <td><span class="badge completed">Completed</span></td>
-                            <td class="amount income">+ ₹45,000</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-        </section>
-
-
-        <!-- Footer -->
-        <footer>
-            <span>CloudLedger v2.0</span>
-            <span>Powered by AWS • Node.js • MySQL</span>
-        </footer>
-
-    </main>
-
-</div>
-
-<script src="app.js"></script>
-
-</body>
-</html>
