@@ -50,69 +50,69 @@ The AWS environment was successfully deployed and tested end-to-end. After testi
 
 ```text
 
-&#x20;                        Internet
+                         Internet
 
-&#x20;                           |
+                            |
 
-&#x20;                           v
+                            v
 
-&#x20;                   +----------------+
+                    +----------------+
 
-&#x20;                   |   Public ALB   |
+                    |   Public ALB   |
 
-&#x20;                   +----------------+
+                    +----------------+
 
-&#x20;                           |
+                            |
 
-&#x20;                           v
+                            v
 
-&#x20;                   +----------------+
+                    +----------------+
 
-&#x20;                   |    Web Tier    |
+                    |    Web Tier    |
 
-&#x20;                   |     Nginx      |
+                    |     Nginx      |
 
-&#x20;                   +----------------+
+                    +----------------+
 
-&#x20;                           |
+                            |
 
-&#x20;                           v
+                            v
 
-&#x20;                   +----------------+
+                    +----------------+
 
-&#x20;                   |  Internal ALB  |
+                    |  Internal ALB  |
 
-&#x20;                   +----------------+
+                    +----------------+
 
-&#x20;                           |
+                            |
 
-&#x20;                           v
+                            v
 
-&#x20;             +---------------------------+
+              +---------------------------+
 
-&#x20;             |     Application Tier      |
+              |     Application Tier      |
 
-&#x20;             |                           |
+              |                           |
 
-&#x20;             |  App Server 1   App 2    |
+              |  App Server 1   App 2    |
 
-&#x20;             |      Node.js / Express    |
+              |      Node.js / Express    |
 
-&#x20;             |        Port 4000          |
+              |        Port 4000          |
 
-&#x20;             +---------------------------+
+              +---------------------------+
 
-&#x20;                           |
+                            |
 
-&#x20;                           v
+                            v
 
-&#x20;                   +---------------+
+                    +---------------+
 
-&#x20;                   |  Database Tier |
+                    |  Database Tier |
 
-&#x20;                   |   MySQL / RDS  |
+                    |   MySQL / RDS  |
 
-&#x20;                   +---------------+
+                    +---------------+
 
 
 ### Architecture Diagram
@@ -306,33 +306,33 @@ The request flow was:
 
 User
 
-&#x20; |
+  |
 
-&#x20; v
+  v
 
 Public ALB
 
-&#x20; |
+  |
 
-&#x20; v
+  v
 
 Nginx Web Tier
 
-&#x20; |
+  |
 
-&#x20; v
+  v
 
 Internal ALB
 
-&#x20; |
+  |
 
-&#x20; v
+  v
 
 Node.js Application
 
-&#x20; |
+  |
 
-&#x20; v
+  v
 
 MySQL Database
 
