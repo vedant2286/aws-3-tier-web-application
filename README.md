@@ -115,6 +115,7 @@ The AWS environment was successfully deployed and tested end-to-end. After testi
                     +---------------+
 
 
+```
 ### Architecture Diagram
 
 ![CloudLedger AWS 3-Tier Architecture](architecture/cloudledger-architecture.png)
@@ -342,6 +343,7 @@ MySQL Database
 
 
 
+```
 ## Auto Scaling
 
 
@@ -424,6 +426,7 @@ The CloudLedger frontend was successfully accessed through the Public ALB and wa
 
 
 
+```
 ## Troubleshooting
 
 
